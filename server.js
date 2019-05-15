@@ -6,6 +6,8 @@ const crypto = require('crypto');
 
 const app = express();
 
+require('dotenv').config();
+
 // bodyParser Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -13,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // define mailchimp variables
 var mailchimpInstance   = 'us15',
     listUniqueId        = '087d6c3e6b',
-    mailchimpApiKey     = '94da036cf2c8aeef0ac81419e064d667-us15';
+    mailchimpApiKey     = process.env.MAILCHIMP_API;
 
 // route to subscribe new user to mailchimp list
 app.put('/subscribe', function (req, res) {
