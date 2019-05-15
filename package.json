@@ -3,15 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.0",
+    "crypto": "^1.0.1",
+    "express": "^4.16.4",
+    "node-sass-chokidar": "^1.3.4",
+    "nodemon": "^1.19.0",
+    "path": "^0.12.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "superagent": "^5.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "yarn --cwd client/app build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon server.js",
+    "client": "concurrently \"yarn --cwd client/app start\" \"yarn --cwd client/app watch-css\"",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\""
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quattrocento Sans', sans-serif; }
+
+.half {
+  width: 50%;
+  display: inline-block; }
+  .half:first-child {
+    margin: -4px 0 0;
+    transform: translate(0, 4px);
+    padding: 0;
+    background: black; }
+    .half:first-child img {
+      max-width: 50%;
+      display: inline-block;
+      margin: -4px 0 0; }
+      .half:first-child img:nth-child(1), .half:first-child img:nth-child(2) {
+        margin: 0; }
+  .half:last-child {
+    vertical-align: middle;
+    height: 100%;
+    position: fixed;
+    background: linear-gradient(to bottom right, #595D84, #0E1F3D);
+    color: white;
+    box-sizing: border-box;
+    padding: 0 10%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; }
+    .half:last-child header {
+      text-align: center;
+      margin-bottom: 50px; }
+      .half:last-child header h3 {
+        font-weight: normal;
+        font-size: 16pt;
+        line-height: 26px; }
+    .half:last-child section {
+      position: relative;
+      z-index: 2; }
+      .half:last-child section h2 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0; }
+      .half:last-child section p {
+        line-height: 24px;
+        font-size: 13pt;
+        color: #7C819B; }
+      .half:last-child section #form {
+        position: relative;
+        margin-top: 50px; }
+        .half:last-child section #form input {
+          line-height: 50px;
+          font-size: 16pt;
+          border: none;
+          border-radius: 25px;
+          padding: 0 75px 0 15px;
+          display: block;
+          width: 100%;
+          box-sizing: border-box; }
+          .half:last-child section #form input:focus {
+            outline: none; }
+        .half:last-child section #form button {
+          border: none;
+          height: 50px;
+          line-height: 50px;
+          padding: 0 25px;
+          font-size: 8pt;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          position: absolute;
+          top: 0;
+          right: -3px;
+          border-radius: 0 25px 25px 0;
+          background: linear-gradient(to bottom right, #FF807A, #FFB25E);
+          color: white; }
+        .half:last-child section #form p {
+          text-align: center;
+          line-height: 30px;
+          color: white;
+          border-radius: 5px; }
+          .half:last-child section #form p.success {
+            background: #498954; }
+          .half:last-child section #form p.error {
+            background: #C86262; }
+    .half:last-child footer {
+      position: absolute;
+      z-index: 1;
+      bottom: 25px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #7C819B; }
+      .half:last-child footer img {
+        width: 30px;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        transform: translate(0, -2px);
+        opacity: 0.35; }
+
+@media (min-width: 1919px) {
+  .half:last-child header h3 {
+    font-size: 24pt;
+    line-height: 40px; }
+  .half:last-child section p {
+    font-size: 18pt;
+    line-height: 32px; } }
+
+@media (max-height: 600px) {
+  .half:last-child {
+    padding: 25px;
+    overflow: scroll; }
+    .half:last-child .flex {
+      transform: scale(0.8); } }
+
+@media (max-width: 414px) {
+  .half {
+    width: 100%; }
+    .half:last-child {
+      position: relative;
+      height: 100vh;
+      padding: 0 50px; }
+      .half:last-child section #form {
+        margin-top: 25px; }
+      .half:last-child .flex {
+        transform: translate(0, -30px); } }
+
+@media (max-width: 375px) {
+  .half:last-child {
+    padding: 0 25px; } }
+
+@media (max-width: 320px) {
+  .half:last-child {
+    height: auto;
+    padding: 0 25px 50px; }
+    .half:last-child .flex {
+      transform: translate(0, 0) scale(0.9); } }
