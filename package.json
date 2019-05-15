@@ -23,7 +23,8 @@
     "eject": "react-scripts eject",
     "server": "nodemon server.js",
     "client": "concurrently \"yarn --cwd client/app start\" \"yarn --cwd client/app watch-css\"",
-    "dev": "concurrently \"yarn run server\" \"yarn run client\""
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "prod": "concurrently \"yarn run server\" \"yarn --cwd client/app start\""
   },
   "eslintConfig": {
     "extends": "react-app"
